@@ -1,0 +1,15 @@
+<%=form_for @item do |u|%>
+<%=u.label :name %>
+<%=u.text_field :name %>
+<%=u.label :description %>
+<%=u.text_field :description%>
+<%=u.label :price%>
+<%=u.number_field :price%>
+<%=u.label :quantity%>
+<%=u.number_field :quantity%>
+<%=u.label :restock_level%>
+<%=u.number_field :restock_level%>
+<%=u.label :expirey_date%>
+<%=u.date_field :expirey_date%>
+<%=u.submit%>
+<%end%>
