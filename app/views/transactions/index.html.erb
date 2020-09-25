@@ -1,0 +1,3 @@
+<%@transactions.each do |transaction| %>
+<%= link_to transaction.type, transaction_path(transaction) %>
+<%end%>
