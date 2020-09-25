@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by(id: params[:id])
     end
+
     def edit
     end
     def create
@@ -22,7 +23,6 @@ class UsersController < ApplicationController
         end
     end
 
-    end
     def update
     end
     def destroy
@@ -30,5 +30,6 @@ class UsersController < ApplicationController
     private
         def user_params
             params.require(:user).permit(:username, :name, :password,:password_confirmation,:is_admin)
+        end
 
 end
