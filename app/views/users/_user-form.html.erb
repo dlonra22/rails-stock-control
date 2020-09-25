@@ -7,7 +7,6 @@
 <%=u.password_field :password%><br/>
 <%=u.label :password_confirm%><br/>
 <%=u.password_field :password_confirm%><br/>
-<%=u.label :is_admin%><br/>
-<%=u.check_box :is_admin%><br/>
+<%=allow_admin_registration%>
 <%=u.submit%>
 <%end%>
