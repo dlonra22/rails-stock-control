@@ -1,0 +1,11 @@
+<%=form_for @transaction do |u|%>
+<%=u.label :user_id %>
+<%=u.number_field :user_id %>
+<%=u.label :item_name %>
+<%=u.select_tag :item_name, options_from_collection_for_select(Item.all, :id, :name), include_blank: "Select Items"%>
+<%=u.label :tr_qty, "Quantity"%>
+<%=u.number_field :tr_qty%>
+<%=u.label :tr_value,"Value"%>
+<%=u.number_field :tr_value%>
+<%=u.submit%>
+<%end%>
