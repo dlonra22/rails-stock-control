@@ -1,4 +1,4 @@
-class TranscationsController < ApplicationController
+class TransactionsController < ApplicationController
     def index
         @transactions.all
     end
