@@ -1,13 +1,13 @@
 <%=form_for @user do |u|%>
-<%=u.label :username %>
-<%=u.text_field :username %>
-<%=u.label :name %>
-<%=u.text_field :name%>
-<%=u.label :password%>
-<%=u.password_field :password%>
-<%=u.label :password%>
-<%=u.password_field :password_confirm%>
-<%=u.label :is_admin%>
-<%=u.check_box :is_admin%>
+<%=u.label :username %><br/>
+<%=u.text_field :username %><br/>
+<%=u.label :name %><br/>
+<%=u.text_field :name%><br/>
+<%=u.label :password%><br/>
+<%=u.password_field :password%><br/>
+<%=u.label :password_confirm%><br/>
+<%=u.password_field :password_confirm%><br/>
+<%=u.label :is_admin%><br/>
+<%=u.check_box :is_admin%><br/>
 <%=u.submit%>
 <%end%>

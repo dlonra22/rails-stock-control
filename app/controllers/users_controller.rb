@@ -4,8 +4,12 @@ class UsersController < ApplicationController
     end
     
     def new
+        @user = User.new
+        render :new
     end
+
     def show
+        @user=User.find_by(name: params[:id])
     end
     def edit
     end
