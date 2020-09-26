@@ -6,33 +6,33 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <nav id='menu'>
-  <%=button_to "Log out", logout_path, method: "delete" %>
-  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-  <ul>
-    <li><%=link_to "Home", user_path(current_user) %></li>
-    <li><a class='dropdown-arrow x' href=''>Items</a>
-      <ul class='sub-menus'>
-        <li><%=link_to "add to inventory", new_item_path%></li>
-        <li><%=link_to "manage items", items_path%></li>
+  <%if current_user %>
+      <nav id='menu'>
+      <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+      <ul>
+        <li><%=link_to "Home", user_path(current_user) %></li>
+        <li><a class='dropdown-arrow x' href=''>Items</a>
+          <ul class='sub-menus'>
+            <li><%=link_to "add to inventory", new_item_path%></li>
+            <li><%=link_to "manage items", items_path%></li>
+          </ul>
+        </li>
+        <li><a class='dropdown-arrow x' href=''>Transactions</a>
+          <ul class='sub-menus'>
+            <li><%=link_to"My Transactions", user_transcations_path(current_user) %></li>
+            <li><%=link_to"Manage Transactions", transactions_url %></li>
+          </ul>
+        </li>
+        <li><a class='dropdown-arrow x' href=''>Admin</a>
+          <ul class='sub-menus'>
+            <li><%=link_to "Manage Users",users_path%></li>
+            <li><%=link_to "Manage My Profile",edit_user_path(current_user)%></li>
+          </ul>
+        </li>
+        <li><%=button_to "Log out", logout_path, method: "delete", class: 'btn' %><li>
       </ul>
-    </li>
-    <li><a class='dropdown-arrow x' href=''>Transactions</a>
-      <ul class='sub-menus'>
-        <li><%=link_to"My Transactions", user_transcations_path(current_user) %></li>
-        <li><%=link_to"Manage Transactions", transactions_url %></li>
-      </ul>
-    </li>
-    <li><a class='dropdown-arrow x' href=''>Admin</a>
-      <ul class='sub-menus'>
-        <li><%=link_to "Manage Users",users_path%></li>
-        <li><%=link_to "Manage My Profile",edit_user_path(current_user)%></li>
-      </ul>
-    </li>
-  </ul>
-  <%=button_to "Log out", logout_path, method: "delete", class: 'btn' %>
-</nav>
-<nav></nav>
+    </nav>
+<%end%>
     <!-- content -->
     <div class="container row row-centered"  role="main">
       <%=flash[:error] if flash[:error]%>

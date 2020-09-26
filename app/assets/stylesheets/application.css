@@ -55,7 +55,7 @@
 	padding: 0;
 	height: 45px;
 	width: 100%;
-	opacity: 0;
+	opacity: 10;
 	cursor: pointer
 }
 #menu label {
@@ -90,13 +90,8 @@
 #menu li:hover ul.sub-menus {
 	display: block
 }
-#menu input.btn{display: none;
-	line-height: 45px;
-	text-align: center;
+#menu input.btn{
 	position: relative;
-	left: 35px
-    box-shadow: 0px 0px 0px 2px #3dc21b;
-	background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
 	background-color:#44c767;
 	border-radius:10px;
 	border:1px solid #18ab29;
@@ -104,9 +99,6 @@
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:19px;
-	padding:12px 37px;
-	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;
     }
 #menu a.x{
