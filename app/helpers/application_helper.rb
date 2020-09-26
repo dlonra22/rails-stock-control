@@ -8,4 +8,7 @@ module ApplicationHelper
         @c_user  
     end
 
+    def reset_user
+        @c_user =nil
+    end
 end
