@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by(id: params[:id])
+        redirect_to users_path
     end
 
     def edit

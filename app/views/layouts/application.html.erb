@@ -13,7 +13,8 @@
             <ul class="nav navbar-nav">
               <a class="navbar-brand" href="<%= users_url %>"/>Home</a>  
               <a class="navbar-brand" href="<%= transactions_url %>"/>Transactions</a>  
-              <a class="navbar-brand" href="<%= items_url %>"/>Items</a>   
+              <a class="navbar-brand" href="<%= items_url %>"/>Items</a> 
+              <%=link_to "Log Out", logout_path, method: :delete, class:"navbar-brand" %>  
             </ul>
           </div><!--/.nav-collapse -->
         </div>

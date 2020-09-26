@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/login" => "sessions#login"
   post"/login" => "session#create"
   get "/register" =>"users#new"
+  delete "/logout" =>"sessions#destroy"
   resources :users, only:[:show] do
       resources :transcations, only: [:index, :new, :show, :create, :destroy]
   end
