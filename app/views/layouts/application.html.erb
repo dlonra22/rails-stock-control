@@ -6,22 +6,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-     <%if current_user %>
-     <%=button_to "Log out", logout_path, method: "delete" %>
-      <div class="container">
-        <div class="navbar-header">
-        <a class="navbar-brand" href="<%= user_url(current_user) %>"/>Home</a>  
-        <a class="navbar-brand" href="<%= transactions_url %>"/>Transactions</a>  
-        <a class="navbar-brand" href="<%= items_url %>"/>Items</a>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-      <%end%>
-    </div>
+  <nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><%=link_to"Home", user_url(current_user) %></li>
+    <li><a class='dropdown-arrow' href='http://'>Items</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>add to inventory</a></li>
+        <li><a href='http://'>manage items</a></li>
+      </ul>
+    </li>
+    <li>Transactions
+      <ul class='sub-menus'>
+        <li><%=link_to"My Transactions", user_transcations_path(current_user) %></li>
+        <li><%=link_to"Manage Transactions", transactions_url %></li>
+      </ul>
+    </li>
+    <li><a class='dropdown-arrow' href=''>Users</a>
+      <ul class='sub-menus'>
+        <li><%=link_to "Manage Users",users_path%></li>
+        <li><%=link_to "Manage My Profile",edit_user_path(current_user)%></li>
+      </ul>
+    </li>
+    <li><%=button_to "Log out", logout_path, method: "delete" %></li>
+  </ul>
+</nav>
     <!-- content -->
     <div class="container row row-centered"  role="main">
       <%=flash[:error] if flash[:error]%>
