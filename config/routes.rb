@@ -9,5 +9,5 @@ Rails.application.routes.draw do
       resources :transcations, only: [:index, :new, :show, :create, :destroy]
   end
   resources :transactions, only: [:index] #temporary to get basic server running. 
-  
+  root to: 'sessions#login'
 end
