@@ -1,2 +1,22 @@
 <h1>Welcome <%=@user.name%></h1>
-
+<div class="colmid">
+    <div class="colleft">
+        <div class="col1">
+            <h3>Controls</h3>
+            <%=link_to "Sell an Item",new_user_transcation_path(@user)%><br/>
+            <%=link_to "Refund an Item",new_user_transcation_path(@user)%><br/>
+            <%=link_to "Restock an Item",new_user_transcation_path(@user)%><br/>
+        </div>
+        <div class="col2">
+            <h3>Reports</h3>
+            <%=link_to "Items", user_transcations_path(@user)%><br/>
+            <%=link_to "Transactions", user_transcations_path(@user)%><br/><br/>
+        </div> 
+        <div class="col3">
+            <h3>Admin</h3>
+            <%=link_to "Edit My Profile",edit_user_path(@user)%><br/>
+            <%=link_to "Manage Items",items_path%><br/>
+            <%=link_to "Manage Transactions", transactions_path%><br/>
+        </div> 
+    </div> 
+</div>
