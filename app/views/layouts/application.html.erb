@@ -24,6 +24,9 @@
     </div>
     <!-- content -->
     <div class="container"  role="main">
+    <%=flash[:error] if flash[:error]%>
+    <%=flash[:alert] if flash[:alert]%>
+    <%=flash[:message] if flash[:message]%>
       <%= yield %>
     </div>
   </body>

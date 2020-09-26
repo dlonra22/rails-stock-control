@@ -2,6 +2,10 @@ class SessionsController < ApplicationController
     def new
     end
     def login
+        if current_user
+            flash[:alert] = "you are already logged in"
+            redirect_to user_path(current_user)
+        end
     end
     def create
         user = User.find_by(username: params[:user][:username])
