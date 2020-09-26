@@ -7,18 +7,20 @@
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <%if current_user %>
+     <%=button_to "Log out", logout_path, method: "delete" %>
       <div class="container">
         <div class="navbar-header">
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <a class="navbar-brand" href="<%= users_url %>"/>Home</a>  
               <a class="navbar-brand" href="<%= transactions_url %>"/>Transactions</a>  
-              <a class="navbar-brand" href="<%= items_url %>"/>Items</a> 
-              <%=link_to "Log Out", logout_path, method: :delete, class:"navbar-brand" %>  
+              <a class="navbar-brand" href="<%= items_url %>"/>Items</a>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
+      <%end%>
     </div>
     <!-- content -->
     <div class="container"  role="main">
