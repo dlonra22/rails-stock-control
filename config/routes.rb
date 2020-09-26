@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :items
   resources :users
   get "/login" => "sessions#login"
-  post"/login" => "session#create"
+  post"/login" => "sessions#create"
   get "/register" =>"users#new"
   delete "/logout" =>"sessions#destroy"
   resources :users, only:[:show] do
