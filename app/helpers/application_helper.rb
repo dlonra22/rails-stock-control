@@ -5,7 +5,7 @@ module ApplicationHelper
         else
             @c_user = nil
         end
-        @c_user 
+        @c_user  
     end
 
 end
