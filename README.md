@@ -41,6 +41,7 @@ RAILS STOCK CONTROL APP
     associations: belongs_to category, has_many transactions, has_many users through transactions
 
 * System dependencies
+    ruby '2.6.1'
     The app utilises the bycrypt and omniauth gems outside the normal gems provided by rails new
 * Configuration
 

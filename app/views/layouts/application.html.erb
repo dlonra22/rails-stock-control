@@ -11,11 +11,11 @@
      <%=button_to "Log out", logout_path, method: "delete" %>
       <div class="container">
         <div class="navbar-header">
+        <a class="navbar-brand" href="<%= user_url(current_user) %>"/>Home</a>  
+        <a class="navbar-brand" href="<%= transactions_url %>"/>Transactions</a>  
+        <a class="navbar-brand" href="<%= items_url %>"/>Items</a>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <a class="navbar-brand" href="<%= users_url %>"/>Home</a>  
-              <a class="navbar-brand" href="<%= transactions_url %>"/>Transactions</a>  
-              <a class="navbar-brand" href="<%= items_url %>"/>Items</a>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
