@@ -23,11 +23,13 @@
       <%end%>
     </div>
     <!-- content -->
-    <div class="container"  role="main">
-    <%=flash[:error] if flash[:error]%>
-    <%=flash[:alert] if flash[:alert]%>
-    <%=flash[:message] if flash[:message]%>
-      <%= yield %>
+    <div class="container row row-centered"  role="main">
+      <%=flash[:error] if flash[:error]%>
+      <%=flash[:alert] if flash[:alert]%>
+      <%=flash[:message] if flash[:message]%>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-centered">
+              <%= yield %>
+      </div>
     </div>
   </body>
 </html>
