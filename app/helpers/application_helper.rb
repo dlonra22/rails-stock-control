@@ -11,4 +11,8 @@ module ApplicationHelper
     def reset_user
         @c_user =nil
     end
+    def admin?
+        current_user.try(:is_admin)
+    end
+
 end
