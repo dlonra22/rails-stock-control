@@ -1,11 +1,21 @@
 class UsersController < ApplicationController
     layout "home", only: [:show]
     def index
-        
+     if admin?
         @users = User.all
+     elsif current_user
+        flash[:error] = "admins only"
+        redirect_to user_path(current_user)
+     else 
+        flash[:error] ="please login"
+        redirect_to login_path
+     end
+
     end
     
     def new
+        if admin?
+            
         @user = User.new
     end
 

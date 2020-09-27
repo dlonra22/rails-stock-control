@@ -1,10 +1,10 @@
 module UsersHelper
-    
+
     def allow_admin_registration
-        if User.all
-            check_box_tag :is_admin, checked = true
-        else
+        if admin?
             check_box_tag :is_admin, checked = false
-        end
+        elsif current_user
+        elsif User.all.detect(&:is_admin)
+            check_box_tag :is_admin, checked = false
     end
 end
