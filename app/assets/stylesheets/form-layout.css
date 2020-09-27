@@ -1,0 +1,28 @@
+
+.wrapper{
+   margin: 0px auto;
+   width: 85.38em;
+   background-color: #cccccc
+}
+.header{
+   float: left;
+   width: 100%;
+   height: 40px;
+   background-color: #00a8aa
+}
+.content{
+   float: left;
+   width: 100%;
+   background-color: #99ccff
+}
+.footer{
+   float: left;
+   width: 100%;
+   background-color: #03a0fa
+}
+body {
+   padding: 0px;
+   margin: 0px;
+   font-size: 1.00em;
+   background-color: #e7e7de
+}
