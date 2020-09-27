@@ -15,8 +15,17 @@ class UsersController < ApplicationController
     
     def new
         if admin?
-            
-        @user = User.new
+            @user = User.new
+        elsif current_user
+            flash[:error] = "admins only"
+            redirect_to user_path(current_user)
+        elsif User.admin_users
+            @user = User.new
+            allow_admin_registration = false
+        else
+            @user = User.new
+            allow_admin_registration = true
+        end
     end
 
     def show
