@@ -9,7 +9,9 @@
             <%=u.password_field :password%><br/>
             <%=u.label :password_confirm%><br/>
             <%=u.password_field :password_confirm%><br/>
-            <%=allow_admin_registration%>
+            <%if allow_admin_registration%>
+                <%=u.label :is_admin%>
+                <%=u.check_box :is_admin,
             <%=u.submit%>
             <%end%>
         </div>
