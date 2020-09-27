@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    layout 
+    layout "home", only: [:show]
     def index
         @users = User.all
     end
