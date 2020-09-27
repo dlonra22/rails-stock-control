@@ -17,6 +17,7 @@
    position: relative;
    width: 100%;
    right: 34%;
+   height:100%
    background-color: #e7e7de
 }
 .colleft{
@@ -30,6 +31,7 @@
    overflow: hidden;
    float: left;
    width: 33.5%;
+   height: 100%;
    left: 100.25%;
    background-color: #afeaee
 }
@@ -38,6 +40,7 @@
    overflow: hidden;
    float: left;
    width: 31.5%;
+   height: 100%;
    left: 34.75%;
    background-color: #99ffcc
 }
@@ -46,6 +49,7 @@
    overflow: hidden;
    float: left;
    width: 33.5%;
+   height: 100%;
    left: 69.25%;
    background-color: #d9dde9
 }
@@ -59,5 +63,6 @@ body {
    margin: 0px;
    font-size: 90%;
    background-color: #e7e7de
+   height: 100%;
 }
 

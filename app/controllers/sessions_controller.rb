@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-    def new
-    end
+    layout "form-layout", only: :login
+    
     def login
         if current_user
             flash[:alert] = "you are already logged in"

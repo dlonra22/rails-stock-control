@@ -1,1 +1,14 @@
-<%= render template: "layouts/application" %>
+<html>
+  <head>
+    <title>Rails Stock Control</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'form-layout', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+     <%= yield %>
+
+    <div class="footer">
+        copyright OisagiTech: created by Arnold Bwaila
+    </div>  
+  </body>
+</html>

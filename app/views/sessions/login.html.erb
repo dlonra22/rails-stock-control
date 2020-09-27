@@ -1,8 +1,15 @@
-<h1> Welcome To Stock Control App</h1>
-<%=form_for(:user) do |u|%>
-<%=u.label :username %><br/>
-<%=u.text_field :username %><br/>
-<%=u.label :password%><br/>
-<%=u.password_field :password%><br/>
-<%=u.submit "Login"%>
-<%end%>
+<div class="wrapper">
+    <div class="header">
+        <h1> Welcome To Stock Control App</h1>
+    </div>
+    <div class="content">
+        <%=form_for(:user) do |u|%>
+        <%=u.label :username %><br/>
+        <%=u.text_field :username %><br/>
+        <%=u.label :password%><br/>
+        <%=u.password_field :password%><br/>
+        <%=u.submit "Login"%>
+        <%end%>
+    </div>
+</div>
+

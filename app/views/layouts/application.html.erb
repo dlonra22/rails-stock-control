@@ -34,14 +34,15 @@
     </nav>
 <%end%>
     <!-- content -->
-    <div class="container row row-centered"  role="main">
+    <div>
       <%=flash[:error] if flash[:error]%>
       <%=flash[:alert] if flash[:alert]%>
       <%=flash[:message] if flash[:message]%>
-      
-              <%= yield %>
-      
     </div>
+              <%= yield %>
+    <div class="footer">
+        copyright OisagiTech: created by Arnold Bwaila
+    </div>  
   </body>
 </html>
 
