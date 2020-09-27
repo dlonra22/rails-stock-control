@@ -6,4 +6,8 @@ class User < ApplicationRecord
    def self.admin_users
      where(is_admin: true)
    end
+
+   def allow_admin_registration=(set = false)
+      self.allow_admin_registration = set
+   end
 end
